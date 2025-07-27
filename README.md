@@ -32,8 +32,8 @@ A responsive ToDo list application built using **HTML**, **CSS**, **JavaScript**
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/omjaisatya/todo-api-app.git
-   cd todo-api-app
+   git clone https://github.com/omjaisatya/todo-list-restapi
+   cd todo-list-restapi
    ```
 
 2. **Open `index.html` in your browser**
@@ -47,4 +47,3 @@ Using the [DummyJSON ToDo API](https://dummyjson.com/docs/todos):
 
 - `GET /todos` – Fetch a list of todos
 - `POST /todos/add` – Add a new todo
-- `DELETE /todos/:id` – Delete a todo
