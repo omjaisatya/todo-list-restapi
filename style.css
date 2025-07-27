@@ -1,0 +1,135 @@
+body {
+  background: #f7f9fc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  color: #343a40;
+}
+
+.list-group-item.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+  background-color: #e9ecef;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #495057;
+}
+
+.input-group input.form-control {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding: 0.75rem 1rem;
+}
+
+.input-group .btn {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #495057;
+}
+
+#reset-filters-btn {
+  margin-top: 1rem;
+}
+
+#loader .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+#todo-list {
+  margin-top: 20px;
+}
+
+#todo-list .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e9ecef;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s ease;
+  background: white;
+}
+
+#todo-list .list-group-item:hover {
+  background-color: #f1f3f5;
+}
+
+#pagination-controls .page-item .page-link {
+  border-radius: 0.5rem;
+  margin: 0 0.25rem;
+  color: #495057;
+  transition: all 0.2s ease-in-out;
+}
+
+#pagination-controls .page-item.active .page-link,
+#pagination-controls .page-item .page-link:hover {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+#error-display {
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-group input.form-control {
+    border-radius: 2rem !important;
+    margin-bottom: 0.5rem;
+    border-right: none;
+    width: 100%;
+    min-height: 45px;
+  }
+
+  .input-group .btn {
+    border-radius: 2rem !important;
+    width: 100%;
+    margin: 0;
+    min-height: 45px;
+  }
+
+  #reset-filters-btn {
+    width: 100%;
+  }
+
+  #pagination-controls {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  #todo-list .list-group-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #todo-list .list-group-item > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}

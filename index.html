@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center mb-4 display-5">Todo List</h1>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Add New Todo</h5>
+          <form id="add-todo-form">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="new-todo-input"
+                placeholder="Your new task"
+                required
+              />
+              <button class="btn btn-primary" type="submit">Add Todo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Filters</h5>
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label for="search-input" class="form-label"
+                >Search by Task Name</label
+              >
+              <input
+                type="search"
+                id="search-input"
+                class="form-control"
+                placeholder="Search tasks..."
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="from-date-input" class="form-label">From Date</label>
+              <input type="date" id="from-date-input" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <label for="to-date-input" class="form-label">To Date</label>
+              <input type="date" id="to-date-input" class="form-control" />
+            </div>
+            <div class="col-12 text-end">
+              <button id="reset-filters-btn" class="btn btn-secondary">
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="loader" class="text-center my-5 d-none">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      <div
+        id="error-display"
+        class="alert alert-danger d-none"
+        role="alert"
+      ></div>
+
+      <ul id="todo-list" class="list-group"></ul>
+
+      <nav id="pagination-nav" class="mt-4 d-flex justify-content-center">
+        <ul id="pagination-controls" class="pagination"></ul>
+      </nav>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
